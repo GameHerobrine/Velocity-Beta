@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.velocity.beta.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "IMinecraft",
+    "TickMixin"
+  ],
+  "server": [
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
