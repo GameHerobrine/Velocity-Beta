@@ -18,7 +18,6 @@ public class MixinMinecraft {
 
     @Inject(method = "tick", at = @At("TAIL"))
     private void onTick(CallbackInfo callbackInfo) {
-        if (mc.player != null && mc.worldRenderer != null) {
             for (Module module : ModuleManager.getModules()) {
                 if (module.isEnabled()) {
                     module.onUpdate();
@@ -26,4 +25,3 @@ public class MixinMinecraft {
             }
         }
     }
-}
