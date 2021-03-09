@@ -6,7 +6,8 @@ package us.velocity.client.api.module;
 
 public enum ModuleCategory {
     Combat,
-    Render,
     Movement,
+    Render,
+    Exploit,
     Misc
 }
