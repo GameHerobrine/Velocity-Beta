@@ -4,9 +4,28 @@
   "package": "us.velocity.client.impl.mixins",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "MixinMinecraft"
+    "FastTickMixin",
+    "InitializationMixin",
+    "MainMenuMixin",
+    "MixinRender2d",
+    "TickMixin",
+    "vanillafixes.AbstractClientPlayerMixin",
+    "vanillafixes.BoatMixin",
+    "vanillafixes.ClientPlayNetworkHandlerMixin",
+    "vanillafixes.DeathMixin",
+    "vanillafixes.EntityBaseMixin",
+    "vanillafixes.FenceMixin",
+    "vanillafixes.HatchetMixin",
+    "vanillafixes.LoginThreadMixin",
+    "vanillafixes.MainMenuMixin",
+    "vanillafixes.PickaxeMixin",
+    "vanillafixes.PlayerBaseMixin",
+    "vanillafixes.RemoteClientInteractionManagerMixin",
+    "vanillafixes.RemoteClientPlayerMixin",
+    "vanillafixes.RenderListMixin",
+    "vanillafixes.StairsMixin",
+    "vanillafixes.ThreadDownloadResourcesMixin"
   ],
-
   "injectors": {
     "defaultRequire": 1
   }

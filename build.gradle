@@ -2,18 +2,15 @@ buildscript {
 	repositories {
 		mavenCentral()
 		jcenter()
-
 		maven {
 			name = "Fabric"
 			url = "https://maven.fabricmc.net/"
 		}
-
 		maven {
 			name = "Jitpack"
 			url 'https://jitpack.io/'
 		}
 	}
-
 	dependencies {
 		classpath 'com.github.Chocohead:Fabric-Loom:e3d1762'
 	}
@@ -51,8 +48,8 @@ repositories {
 	}
 }
 
-minecraft {}
-
+minecraft {
+}
 
 dependencies {
 	// fabric loader requires log4j, guava, and gson
@@ -69,6 +66,18 @@ dependencies {
 	implementation 'org.ow2.asm:asm-commons:9.0'
 	implementation 'org.ow2.asm:asm-tree:9.0'
 	implementation 'org.ow2.asm:asm-util:9.0'
+
+	// java mojang API
+	include group: 'commons-codec', name: 'commons-codec', version: '1.14'
+	include group: 'commons-logging', name: 'commons-logging', version: '1.2'
+	include group: 'org.apache.httpcomponents', name: 'httpasyncclient', version: '4.1.4'
+	include group: 'org.apache.httpcomponents', name: 'httpcore-nio', version: '4.4.13'
+	include group: 'org.apache.httpcomponents', name: 'httpcore', version: '4.4.13'
+	include group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.8'
+	include group: 'com.mashape.unirest', name: 'unirest-java', version: '1.4.9'
+	include group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+	implementation 'com.github.SparklingComet:java-mojang-api:-SNAPSHOT'
+	include 'com.github.SparklingComet:java-mojang-api:-SNAPSHOT'
 
 	// to change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
