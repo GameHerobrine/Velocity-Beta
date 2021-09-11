@@ -9,6 +9,7 @@
     "MainMenuMixin",
     "MixinRender2d",
     "TickMixin",
+    "MixinNetworkManager",
     "vanillafixes.AbstractClientPlayerMixin",
     "vanillafixes.BoatMixin",
     "vanillafixes.ClientPlayNetworkHandlerMixin",
