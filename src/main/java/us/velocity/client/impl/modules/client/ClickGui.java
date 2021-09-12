@@ -14,7 +14,7 @@ public class ClickGui extends Module
 {
 
     private static final List<String> modes = Arrays.asList("Bruce", "Cliffbase");
-    public static final Setting<String> theme = new Setting<String>("Theme", ClickGui.modes);;
+    public static final Setting<String> theme = new Setting<String>("Theme", ClickGui.modes);
     public static final Setting<Double> r = new Setting<Double>("R", 0.0, 0.0, 255.0, 1);
     public static final Setting<Double> g = new Setting<Double>("G", 0.0, 103.0, 255.0, 1);
     public static final Setting<Double> b = new Setting<Double>("B", 0.0, 119.0, 255.0, 1);

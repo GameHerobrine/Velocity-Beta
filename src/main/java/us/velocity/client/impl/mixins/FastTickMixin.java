@@ -1,6 +1,7 @@
 package us.velocity.client.impl.mixins;
 
 import net.minecraft.entity.Living;
+import org.checkerframework.checker.units.qual.A;
 import org.lwjgl.input.Keyboard;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

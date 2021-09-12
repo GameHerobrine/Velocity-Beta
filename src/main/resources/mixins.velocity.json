@@ -10,6 +10,7 @@
     "MixinRender2d",
     "TickMixin",
     "MixinNetworkManager",
+    "EntityRenderer",
     "vanillafixes.AbstractClientPlayerMixin",
     "vanillafixes.BoatMixin",
     "vanillafixes.ClientPlayNetworkHandlerMixin",

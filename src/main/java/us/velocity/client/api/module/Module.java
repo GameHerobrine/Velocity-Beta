@@ -50,7 +50,7 @@ public abstract class Module implements Listener
 	}
 
 	public void onEnable() {
-		if (ModuleManager.getModuleByClass(Notify.class).isEnabled() && !this.name.equalsIgnoreCase("clickgui")) {
+		if (ModuleManager.getModuleByClass(Notify.class).isEnabled() && !this.name.equalsIgnoreCase("clickgui") && Velocity.mc.player != null) {
 			MessageUtil.sendClientMessage(this.name + ChatFormatting.GREEN + " enabled");
 		}
 		Velocity.eventBus.subscribe(this);

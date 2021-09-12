@@ -6,6 +6,7 @@ import us.velocity.client.api.events.bus.Listener;
 import us.velocity.client.impl.modules.client.*;
 import us.velocity.client.impl.modules.exploit.*;
 import us.velocity.client.impl.modules.misc.*;
+import us.velocity.client.impl.modules.render.NoRender;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,6 +21,7 @@ public class ModuleManager implements Listener
 
             //exploit
             new NoFall(),
+            new Test(),
             //exploit
 
             //misc
@@ -31,7 +33,7 @@ public class ModuleManager implements Listener
             //movement
 
             //render
-
+            new NoRender(),
             //render
 
             //client

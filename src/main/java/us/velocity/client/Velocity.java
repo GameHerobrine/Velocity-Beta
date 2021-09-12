@@ -18,8 +18,8 @@ public class Velocity implements ModInitializer, Listener {
     public static EventBus eventBus = new EventBus();
     public static Velocity INSTANCE = new Velocity();
 
+    public static ModuleManager moduleManager = new ModuleManager();
     public static Logger LOGGER;
-    public static ModuleManager moduleManager = new ModuleManager();;
     public static Minecraft mc;
 
     @Override
