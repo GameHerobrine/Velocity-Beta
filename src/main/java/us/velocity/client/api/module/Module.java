@@ -181,7 +181,8 @@ public abstract class Module implements Listener
 		EXPLOIT("Exploit"),
 		MISC("Misc"),
 		MOVEMENT("Movement"),
-		RENDER("Render");
+		RENDER("Render"),
+		HIDDEN("Hidden");
 
 		private final String name;
 

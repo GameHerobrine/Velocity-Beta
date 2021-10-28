@@ -4,19 +4,22 @@ import org.lwjgl.input.Keyboard;
 import us.velocity.client.Velocity;
 import us.velocity.client.api.events.bus.Listener;
 import us.velocity.client.impl.modules.client.*;
+import us.velocity.client.impl.modules.combat.*;
 import us.velocity.client.impl.modules.exploit.*;
 import us.velocity.client.impl.modules.misc.*;
-import us.velocity.client.impl.modules.render.NoRender;
+import us.velocity.client.impl.modules.movement.*;
+import us.velocity.client.impl.modules.render.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class ModuleManager implements Listener
 {
     private static final List<Module> modules = Arrays.asList(
             //combat
-
+            new Killaura(),
             //combat
 
             //exploit
@@ -25,11 +28,13 @@ public class ModuleManager implements Listener
             //exploit
 
             //misc
+            new AutoDupe(),
             new Music(),
             //misc
 
             //movement
-
+            new Scaffold(),
+            new Scaffold2(),
             //movement
 
             //render
@@ -49,7 +54,7 @@ public class ModuleManager implements Listener
     }
 
     public static List<Module> getModulesInCategory(final Module.Category cat) {
-        final List<Module> module = new ArrayList<Module>();
+        List<Module> module = new ArrayList<Module>();
         for (final Module m : ModuleManager.modules) {
             if (m.getCategory().equals(cat)) {
                 module.add(m);

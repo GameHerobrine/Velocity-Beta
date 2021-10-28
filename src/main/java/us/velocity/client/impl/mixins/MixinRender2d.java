@@ -10,6 +10,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import us.velocity.client.Velocity;
 import us.velocity.client.api.module.Module;
 import us.velocity.client.api.module.ModuleManager;
+import us.velocity.client.api.util.ColorUtil;
+import us.velocity.client.api.util.RenderUtil;
 import us.velocity.client.impl.modules.client.HUD;
 import org.lwjgl.opengl.GL11;
 
@@ -27,22 +29,4 @@ public class MixinRender2d
             }
         }
     }
-
-    @Inject(method = "renderHud", at = @At("TAIL"))
-    public void renderHud(float f, boolean flag, int i, int j, CallbackInfo ci) {
-        if (ModuleManager.getModuleByClass(HUD.class).isEnabled()) {
-            GL11.glPushMatrix();
-            int y = 0;
-            for(Module module : ModuleManager.getModules()) {
-                if(module.isEnabled()) {
-                    ScreenScaler scaler = new ScreenScaler(Velocity.mc.options, Velocity.mc.actualWidth, Velocity.mc.actualHeight);
-                    String name = module.getName();
-                    Velocity.mc.textRenderer.drawTextWithShadow(module.getName(), (int) (scaler.scaledWidth - Velocity.mc.textRenderer.getTextWidth(name) - 2), y + 2, module.hashCode());
-                    y += 10;
-                }
-            }
-            GL11.glPopMatrix();
-        }
-    }
-    // me when i steal code
 }

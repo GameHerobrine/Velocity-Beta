@@ -11,6 +11,7 @@
     "TickMixin",
     "MixinNetworkManager",
     "EntityRenderer",
+    "BrightnessMixin",
     "vanillafixes.AbstractClientPlayerMixin",
     "vanillafixes.BoatMixin",
     "vanillafixes.ClientPlayNetworkHandlerMixin",

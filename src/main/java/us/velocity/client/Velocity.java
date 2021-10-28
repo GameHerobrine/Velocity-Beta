@@ -32,6 +32,7 @@ public class Velocity implements ModInitializer, Listener {
         Runtime.getRuntime().addShutdownHook(new BaseShutdownHook());
         LOGGER.info("Shutdown Hook Initialized!");
         FileUtil.loadAll();
+        mc.session.username = "pooooooop";
     }
 
     public void register() {
