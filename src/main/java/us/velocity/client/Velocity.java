@@ -2,6 +2,8 @@ package us.velocity.client;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.client.Minecraft;
+import net.minecraft.network.PacketHandler;
+import net.minecraft.server.network.ServerPlayNetworkHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import us.velocity.client.api.events.bus.EventBus;
@@ -11,6 +13,7 @@ import us.velocity.client.api.gui.theme.Theme;
 import us.velocity.client.api.gui.util.FileUtil;
 import us.velocity.client.api.module.ModuleManager;
 
+import java.io.DataInputStream;
 import java.lang.reflect.Field;
 
 public class Velocity implements ModInitializer, Listener {

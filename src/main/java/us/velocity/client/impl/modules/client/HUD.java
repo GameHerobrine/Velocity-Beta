@@ -18,7 +18,6 @@ public class HUD extends Module
 
     @Override
     public void onRender2d() {
-        int FONT_HEIGHT = 9;
         ScreenScaler scaler = new ScreenScaler(Velocity.mc.options, Velocity.mc.actualWidth, Velocity.mc.actualHeight);
         TextRenderer fr = Velocity.mc.textRenderer;
         int yOff = 0;

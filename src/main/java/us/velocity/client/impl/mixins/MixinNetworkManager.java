@@ -15,7 +15,7 @@ import us.velocity.client.impl.modules.misc.AutoDupe;
 @Mixin(ClientPlayNetworkHandler.class)
 public class MixinNetworkManager
 {
-    @Inject(method = { "sendPacket" }, at = { @At("HEAD") }, cancellable = true)
+    @Inject(method = "sendPacket", at = @At("HEAD"), cancellable = true)
     public void onPacketSend(AbstractPacket packet, CallbackInfo ci) {
         PacketEvent.PacketSendEvent event = new PacketEvent.PacketSendEvent(packet);
         Velocity.eventBus.post(event);

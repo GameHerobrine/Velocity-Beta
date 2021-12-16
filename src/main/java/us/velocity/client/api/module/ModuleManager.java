@@ -29,15 +29,19 @@ public class ModuleManager implements Listener
 
             //misc
             new AutoDupe(),
+            new Freecam(),
             new Music(),
             //misc
 
             //movement
-            new Scaffold(),
+            new Jesus(),
             new Scaffold2(),
+            new Scaffold(),
             //movement
 
             //render
+            new BlockHighlight(),
+            new Fullbright(),
             new NoRender(),
             //render
 
